@@ -1,0 +1,45 @@
+<?php if($this->identity == null) { ?>
+    <!--<p>To log in <a href='/admin/user/login'>click here</a></p>-->
+    <?php //$this->_forward('/admin/user/login'); 
+	 //   $this->_redirector = Zend_Controller_Action_HelperBroker::getStaticHelper('redirector');
+ //   $this->_redirector->gotoUrl('/admin/user/login'); 
+	    
+    ?>
+<?php }else{ ?>
+
+						<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<!--<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />-->
+								<span class="user-info">
+									<small>Hi, <?php echo $this->identity->username;?></small>
+				
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="#">
+										<i class="icon-cog"></i>
+										Settings
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="icon-user"></i>
+										Profile
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="/admin/user/logout">
+										<i class="icon-off"></i>
+										Thoát
+									</a>
+								</li>
+							</ul>
+							
+		<?php } ?>					

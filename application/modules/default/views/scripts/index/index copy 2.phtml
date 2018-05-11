@@ -1,0 +1,415 @@
+<section class="slide">
+		<div class="braak-style">
+			<div class="box1"></div>
+			<div class="box2"></div>
+			<div class="box3"></div>
+			<div class="box4"></div>
+		</div>
+		<div class="bar-menu text-center">
+	    	<!-- menu here -->
+	    </div>
+		<div class="pixel-slide">
+			<?php foreach($this->images as $key=>$val): ?>
+	        <div class="content-slide" data-img="/public/images/backgrounds/<?php echo $val['full']; ?>"></div>
+			 <?php endforeach; ?>
+    		<script type="text/javascript">
+	            $(".pixel-slide").pixel_slide({
+	            	height: "380px",
+	                delayTime:5000,
+	            });
+	        </script>
+	    </div>
+	    <div class="container-fluid bar-slide">
+	    	<h1 class="text-muted">TẬP ĐOÀN HOABINHGROUP (Convention – Events – Travel)</h1>
+	    </div>
+	</section>
+
+<section class="container border01 post-slide" style="padding:0;">
+		<div class="col-md-9 col-sm-8" style="padding:0;">
+			<div class="owl-carousel">
+				<?php foreach($this->images as $key=>$val): ?>
+			    <div class="item">
+			    	<img src="/public/images/backgrounds/<?php echo $val['full']; ?>" class="pull-left">
+			    	<p class="text-muted"><span class="glyphicon glyphicon-edit"></span> 7/12/2016</p>
+			    	<p><a href="#">Giới chuyên môn trong nước hầu như tin rằng đội tuyển Việt Nam hoàn toàn có thể thắng Indonesia</a></p>
+			    </div>
+			    <?php endforeach; ?>
+			</div>
+			<div class="bt-owl-next">></div>
+			<div class="bt-owl-prev"><</div>
+			<script>
+				$(".owl-carousel").owlCarousel({
+				    loop:true,
+				    margin:10,
+				    nav:false,
+				    responsiveClass:true,
+				    responsive:{
+				        0:{
+				            items:1
+				        },
+				        970:{
+				            items:2
+				        },
+				        1170:{
+				            items:3
+				        }
+				    }
+				});
+				var owl = $('.owl-carousel');
+				owl.owlCarousel();
+				// Go to the next item
+				$('.bt-owl-next').click(function() {
+				    owl.trigger('next.owl.carousel');
+				})
+				// Go to the previous item
+				$('.bt-owl-prev').click(function() {
+				    // With optional speed parameter
+				    // Parameters has to be in square bracket '[]'
+				    owl.trigger('prev.owl.carousel', [300]);
+				})
+			</script>
+		</div>
+
+		<div class="col-md-3 col-sm-4" style="padding:0;height: 100%;">
+			<div class="box-share">
+				<div class="box-line-sub">
+					<span class="box-line-sub2"></span>
+				</div>
+				<div class="box-share-c-top">
+					<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i>&nbsp;</a>
+					<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i>&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="bordertb">
+		<div class="container borderlr padd00 break-new">
+			<h2 class="padd10">Tin mới</h2>
+			<marquee class="margin00">
+			 <?php foreach($this->news as $knew=>$vnew): ?>
+				<a href="/su-kien/<?php echo $vnew['ident']; ?>.html"> <?php echo $vnew['name']; ?></a>
+				<?php endforeach; ?>
+			
+			</marquee>
+		</div>
+		<div class="container bordertb borderlr padd00">
+			<div class="col-sm-9 borderr">
+				<div class="row borderb">
+					<h1 style="font-size: 1.8em" class="padd10 margin00 text-center">Sự kiện mới</h1>
+				</div>
+				<div class="row img-grid padd10">
+					<div class="col-sm-6">
+						<div class="img-grid-sub">
+							<a href="/su-kien/<?php echo $this->events[0]['ident']; ?>.html"><img src="<?=PATH_NEWS?><?php echo $this->events[0]['id']; ?>/<?php echo $this->events[0]['full']; ?>"></a>
+							<figcaption>
+		                        <h4><a href="/su-kien/<?php echo $this->events[0]['ident']; ?>.html"> <?php echo $this->events[0]['name']; ?></a></h4>
+		                    </figcaption>
+		                    <span class="clearfix"></span>
+		                </div>
+					</div>
+					<div class="col-sm-3">
+						<div class="img-grid-sub">
+							<a href="/su-kien/<?php echo $this->events[1]['ident']; ?>.html"><img src="<?=PATH_NEWS?><?php echo $this->events[1]['id']; ?>/<?php echo $this->events[1]['full']; ?>"></a>
+							<figcaption>
+		                        <h4><a href="/su-kien/<?php echo $this->events[1]['ident']; ?>.html"><?php echo $this->events[1]['name']; ?></a></h4>
+		                    </figcaption>
+		                    <span class="clearfix"></span>
+		                </div>
+					</div>
+					<div class="col-sm-3">
+						<div class="img-grid-sub">
+							<a href="/su-kien/<?php echo $this->events[2]['ident']; ?>.html"><img src="<?=PATH_NEWS?><?php echo $this->events[2]['id']; ?>/<?php echo $this->events[2]['full']; ?>"></a>
+							<figcaption>
+		                        <h4><a href="/su-kien/<?php echo $this->events[2]['ident']; ?>.html"><?php echo $this->events[2]['name']; ?></a></h4>
+		                    </figcaption>
+		                    <span class="clearfix"></span>
+		                </div>
+					</div>
+					<div class="col-sm-6">
+						 <div class="img-grid-sub">
+							<a href="/su-kien/<?php echo $this->events[3]['ident']; ?>.html"><img src="<?=PATH_NEWS?><?php echo $this->events[3]['id']; ?>/<?php echo $this->events[3]['full']; ?>"></a>
+							<figcaption>
+		                        <h4><a href="/su-kien/<?php echo $this->events[3]['ident']; ?>.html"><?php echo $this->events[3]['name']; ?></a></h4>
+		                    </figcaption>
+		                    <span class="clearfix"></span>
+		                </div>
+					</div>
+					
+				</div>
+
+				<div class="row padd00">
+					<div class="col-sm-9 borderr">
+						<div class="row bordertb">
+							<h1 style="font-size: 1.8em" class="padd10 margin00 text-center">Tin hội nghị mới</h1>
+						</div>
+						<div class="row padd10">
+							<div class="col-sm-6 text-center fix-img100">
+						      <a href="/su-kien/<?php echo $this->related_conference[0]['ident']; ?>.html"><img src="<?=PATH_NEWS?><?php echo $this->related_conference[0]['id']; ?>/<?php echo $this->related_conference[0]['full']; ?>" class="thumbnail" alt="..."></a>
+						      	<div class="caption">
+							        <h4><a href="/su-kien/<?php echo $this->related_conference[0]['ident']; ?>.html"><?php echo $this->related_conference[0]['name']; ?></a></h4>
+							        <p><?php echo $this->related_conference[0]['shortDescription']; ?></p>
+							        <p><a href="/su-kien/<?php echo $this->related_conference[0]['ident']; ?>.html" class="btn btn-danger" role="button">Chi tiết</a></p>
+						      	</div>
+							</div>
+
+							<div class="col-sm-6 borderl business-style">
+								<?php foreach($this->related_conference as $key_hn=>$v_hn): 
+						if($key_hn != 0){ 
+					?>
+								<div class="row">
+									<a href="/su-kien/<?php echo $v_hn['ident']; ?>.html">
+							    	<img src="<?=PATH_NEWS?><?php echo $v_hn['id']; ?>/<?php echo $v_hn['full']; ?>" class="pull-left"></a>
+							    	<p class="text-muted"><span class="glyphicon glyphicon-edit"></span> <?php echo date('d/m/Y',$v_hn['date']); ?> - đăng bởi Louis</p>
+							    	<p><a href="/su-kien/<?php echo $v_hn['ident']; ?>.html"><?php echo $v_hn['name']; ?></a></p>
+							    </div>
+							  <?php }  ?>
+					<?php endforeach; ?>
+							</div>
+						</div>
+
+						<div class="row bordert padd10 text-center">
+							<img src="<?=TEMPLATE_URL?>/default/images/qc/qc02.png" class="img-responsive">
+						</div>
+						
+						<!-- modul technology -->
+						<div class="row bordertb">
+							<h1 style="font-size: 1.8em" class="padd10 margin00 text-center">Các Tour nổi bật trong tháng</h3>
+						</div>
+						<div class="row tech-style padd10">
+							<?php foreach($this->feature_tours as $kft=>$vft):
+								$image = PATH_TOURS .$vft['pid']. '/resize_' .THUMB_MEDIUM .'/'. $vft['full'];
+								 ?>
+							<div class="col-sm-4 fix-img100">
+								<a title="<?php echo $vft['name']; ?>" href="/tour/<?php echo $vft['ident']; ?>.html">
+						      	<img src="<?php echo $image; ?>" class="thumbnail" alt="...">
+								</a>
+						      	<div class="caption">
+						      		<p class="text-muted"><span class="glyphicon glyphicon-edit"></span> <?php echo date('d/m/Y',$vft['date']); ?> - bởi Louis</p>
+							        <h4><a title="<?php echo $vft['name']; ?>" href="/tour/<?php echo $vft['ident']; ?>.html"><b><?php echo $vft['name']; ?></b></a></h4>
+							        <p><span style="color: red;font-size: 1.4em;"> <?php echo number_format($vft['price']); ?> đ</span></p>
+							        <p class="text-center"><a href="/tour/<?php echo $vft['ident']; ?>.html" class="btn btn-danger" role="button">Chi tiết</a></p>
+						      	</div>
+							</div>
+							<?php endforeach; ?>
+						</div>
+						<!-- end -->
+					</div>
+
+					<div class="col-sm-3 ads-mid">
+					
+						<?php foreach($this->promotions as $kp => $vp): 
+					$image = PATH_TOURS .$vp['id']. '/resize_' .THUMB_MEDIUM .'/'. $vp['full'];			
+						?>
+						<div>
+							<a href="/tour/<?php echo $vp['ident']; ?>.html">
+					    	<img src="<?php echo $image; ?>" class="thumbnail">
+							</a>
+					    	<p class="date-ads text-muted"><span class="glyphicon glyphicon-edit"></span> <?php echo date('d/m/Y', $vp['date'] ) ?> - bởi Louis</p>
+					    	<p><a href="/tour/<?php echo $vp['ident']; ?>.html"><b><?php echo $vp['name']; ?></b></a></p>
+					    	<p><span style="color: red">Tour đang giảm giá <?php echo $vp['discountPercent']; ?>%</span></p>
+					    </div>
+						<?php endforeach; ?>
+					   
+					</div>
+				</div>
+
+				<div class="row bordert padd10 text-center">
+					<img src="<?=TEMPLATE_URL?>/default/images/qc/qc01.png" class="img-responsive">
+				</div>
+				
+				<!-- modul product -->
+				<div class="row">
+					<div class="bordert padd00">
+						<h1 style="font-size: 1.8em" class="padd10 margin00 text-center">Thiết bị sự kiện</h1>
+					</div>
+					<div class="row tech-style padd10 text-center">
+					<?php 
+							$i= 0;
+							foreach( $this->equipments as $ke => $ve): $i++; 
+				$image = '/public/images/backgrounds/' .$ve['full'];			
+							?>
+					
+						
+						<div class="col-sm-3 fix-img100">
+							<a href="/su-kien/<?php echo $ve['link']; ?>">
+					      	<img height="145" src="<?php echo $image;?>" class="thumbnail" alt="...">
+							</a>
+					      	<div class="caption">
+					      		<h4><a href="/su-kien/<?php echo $ve['link']; ?>"> <?php echo $ve['name']; ?></a></h4>
+						    
+						        <p><a href="/su-kien/<?php echo $ve['link']; ?>" class="btn btn-danger" role="button">Chi tiết</a></p>
+					      	</div>
+						</div>
+						<?php
+						echo ($i%4==0)?'</div><div class="row tech-style padd10 text-center">':'';
+							 endforeach; ?>
+						
+					</div>
+					
+				</div>
+				<!-- end -->
+
+				<div class="row padd10"></div>
+			</div>
+			<div class="col-sm-3">
+				<div class="row borderb">
+					<h3 class="padd10 margin00 text-center">Sự kiện đã tổ chức</h3>
+				</div>
+				<div class="paddtb10 fix-img100">
+					<?php 
+						//foreach($this->event_held as $keh => $veh);
+						 ?>
+						 <a href="/su-kien/<?php echo $this->event_held[0]['ident']; ?>.html">
+			      	<img src="<?=PATH_NEWS?><?php echo $this->event_held[0]['id']; ?>/<?php echo $this->event_held[0]['full']; ?>" class="thumbnail" alt="...">
+				      	</a>
+			      	<div class="caption">
+			      		<p class="text-muted"><span class="glyphicon glyphicon-edit"></span> <?php echo date('d/mY',$this->event_held[0]['date']); ?></p>
+				        <p <?php echo $this->event_held[0]['name']; ?></p>
+				        <p class=""><a href="/su-kien/<?php echo $this->event_held[0]['ident']; ?>.html" class="btn btn-danger" role="button">Chi tiết</a></p>
+			      	</div>
+			      	<hr>
+			      	<?php 
+						foreach($this->event_held as $keh => $veh):
+						 ?>
+			      	<div class="caption">
+			      		<p class="text-muted"><span class="glyphicon glyphicon-edit"></span> <?php echo date('d/mY',$veh['date']); ?></p>
+				        <p><a href="/su-kien/<?php echo $veh['ident']; ?>.html"> <?php echo $veh['name']; ?></a></p>
+			      	</div>
+			     <?php endforeach; ?>
+				</div>
+
+				<div class="row bordertb">
+					<h3 class="padd10 margin00 text-center">Video Mới</h3>
+				</div>
+				<div class="paddtb10 fix-img100">
+					<?php $thumb = $this->Image()->get_youtube_thumb($this->videos[0]['shortDescription']); ?>
+					<a data="<?php echo str_replace('watch?v=','embed/',$this->videos[0]['shortDescription']); ?>" style="cursor: pointer" onClick="showContent(this);">
+			      	<img src="<?=$thumb?>" class="thumbnail" alt="...">
+					</a>
+			      	<div class="caption">
+				        <p align="center"> <b><?php echo $this->videos[0]['name']; ?></b></p>
+			      	</div>
+			      	<hr>
+			      	<div class="video-list">
+			      		<ul>
+				      		<?php foreach($this->videos as $kvideo=>$vvideo):
+					      	if($kvideo  != 0)	{
+					      		 ?>
+			      			<li><a title="<?php echo $vvideo['name']; ?>" data="<?php echo str_replace('watch?v=','embed/',$vvideo['shortDescription']); ?>" style="cursor: pointer" onClick="showContent(this);"><i class="fa fa-film" aria-hidden="true"></i> <?php echo $vvideo['name']; ?></a></li>
+			      			<?php 
+				      			
+				      			}
+				      			endforeach; ?>
+			      		
+			      		</ul>
+			      	</div>
+				</div>
+
+				<div class="row bordertb">
+					<h3 class="padd10 margin00 text-center">Tags</h3>
+				</div>
+				<div class="paddtb10">
+					<a href="#" class="btn btn-default">du lich</a>
+					<a href="#" class="btn btn-default">Su kien</a>
+					<a href="#" class="btn btn-default">Hoi nghi</a>
+					<a href="#" class="btn btn-default">Hoi thao</a>
+					<a href="#" class="btn btn-default">Truyen Thong</a>
+				</div>
+
+				<div class="row bordertb">
+					<h3 class="padd10 margin00 text-center">Album ảnh</h3>
+				</div>
+				<div class="paddtb10 album-img">
+					
+					<?php foreach($this->gallerys as $kg=>$vg): ?>
+					<div class="col-sm-6">
+						<a href="/gallery/<?php echo $vg['link'];  ?>">
+						<img  src="/public/images/backgrounds/<?php echo $vg['full']; ?>">
+						</a>
+					</div>
+					<?php endforeach ?>
+					<span class="clearfix"></span>
+				</div>
+
+				<div class="row bordertb">
+					<h3 class="padd10 margin00 text-center">ENTERTAINMENT</h3>
+				</div>
+				<div class="paddtb10">
+			      	<div class="caption">
+			      		<p class="text-muted"><span class="glyphicon glyphicon-edit"></span> 7/12/2016 - boi HieuNT</p>
+				        <p><a href="#">Giới chuyên môn trong nước hầu như tin rằng đội tuyển Việt Nam</a></p>
+			      	</div>
+			      	<div class="caption">
+			      		<p class="text-muted"><span class="glyphicon glyphicon-edit"></span> 7/12/2016 - boi HieuNT</p>
+				        <p><a href="#">Giới chuyên môn trong nước hầu như tin rằng đội tuyển Việt Nam</a></p>
+			      	</div>
+			      	<div class="caption">
+			      		<p class="text-muted"><span class="glyphicon glyphicon-edit"></span> 7/12/2016 - boi HieuNT</p>
+				        <p><a href="#">Giới chuyên môn trong nước hầu như tin rằng đội tuyển Việt Nam hoàn toàn có thể thắng Indonesia</a></p>
+			      	</div>
+			      	<div class="caption">
+			      		<p class="text-muted"><span class="glyphicon glyphicon-edit"></span> 7/12/2016 - boi HieuNT</p>
+				        <p><a href="#">Giới chuyên môn trong nước hầu như tin rằng đội tuyển Việt Nam</a></p>
+			      	</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<style>
+		.modal.in .modal-dialog{width: 780px;}
+</style>
+	
+		<!--<div style="width: 100%;" class="modal fade" id="videos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog">
+							<div class="modal-content">
+						
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									<h4 class="modal-title" id="title_modal">Videos</h4>
+								</div>
+								<div class="modal-body" id="video_modal">
+									
+								</div>
+								<div class="modal-footer">
+							
+									
+								</div>
+								
+							</div>
+						</div>
+					</div>-->
+		
+		<div id="popup-1" class="slickModal">
+			<div class="slickWindow">
+				<!-- Your popup content -->
+				<iframe id="myVideo" src="http://www.youtube.com/embed/vsObnzivL1A" frameborder="0"	allowfullscreen>
+				</iframe>
+				<!-- / Your popup content -->
+			</div>
+		</div>
+
+<script type="text/javascript">
+		function showContent(o)
+		{
+		
+		var url = $(o).attr('data');
+		var title = $(o).attr('title');
+
+		$("#videos").modal({'show' : true});
+
+		//alert(id);	
+	$("#video_modal").html('<iframe width="740" height="510" src="'+url+'?&theme=light&autoplay=1" frameborder="0" allowfullscreen></iframe><br/>');
+	
+	$("#title_modal").html(title);
+		}
+		
+		$('#videos	').on('hidden.bs.modal', function () {
+    var src = $(this).find('iframe').attr('src');
+    $(this).find('iframe').attr('src', '');
+ //   $(this).find('iframe').attr('src', src);
+});
+	</script>

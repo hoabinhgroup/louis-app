@@ -1,0 +1,51 @@
+<style>
+.disabled{
+color: #a9a8a6;	
+}
+.active{
+	color: #de5c0b;
+	font-weight: bold;
+}
+</style>
+<?php if ($this->pageCount){
+    // you need to add each of the request parameters to url
+    $params = Zend_Controller_Front::getInstance()->getRequest()->getParams();
+
+    // remove the system parameters
+    unset($params['module']);
+    unset($params['controller']);
+    unset($params['action']);
+?>
+<div class="paginationControl pagination paging clearfix">
+<ul>
+
+<?php if (isset($this->previous)){ ?>
+ <li> <a href="<?php echo $this->url(array_merge(
+      $params, array('page' => $this->previous))); ?>">
+     Prev
+  </a> </li>
+<?php } else { ?>
+  <li><span class="disabled">Prev</span></li>
+<?php } ?>
+<!-- Numbered page links -->
+<?php foreach ($this->pagesInRange as $page){ ?>
+  <?php if ($page != $this->current){ ?>
+    <li> <a href="<?php echo $this->url(array_merge($params,
+        array('page' => $page))); ?>">
+        <?php echo $page; ?>
+    </a></li>
+  <?php } else { ?>
+  <li> <span class="active">  <?php echo $page; ?></span> </li>
+<?php }}?>
+<!-- Next page link -->
+<?php if (isset($this->next)){ ?>
+ <li> <a href="<?php echo $this->url(
+      array_merge($params, array('page' => $this->next))); ?>">
+    Next
+  </a></li>
+<?php } else { ?>
+ <li> <span class="disabled">Next</span></li>
+<?php } ?>
+</ul>
+</div>
+<?php } ?>

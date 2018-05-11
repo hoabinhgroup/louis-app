@@ -1,0 +1,313 @@
+<style>
+	  body { padding-top: 50px; }
+	  
+	  table{
+		  background: #fff;
+		  margin-top: 30px;
+	  }
+
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+     .content {min-height:600px}
+   
+    .row.content {min-height:600px}
+    
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+  
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+.table > tbody > tr > td{
+    padding: 5px;
+    vertical-align: middle;
+  
+}
+
+.button {
+  
+    border: none;
+    color: white;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+}
+.button:hover {
+    text-decoration: none;
+    color: white;
+    opacity: 0.8;
+  
+}
+
+.button-blue {background-color: #1bb6eb;} /* Blue */
+.button-red {background-color: #eb990b;} /* Red */ 
+.button-green {background-color: #17b417;} /*Green */
+.button-purple  {background-color: purple;} /*purple  */
+.custom-alert {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 6px;
+    margin: 2px;
+    background: green;
+    border: 1px solid transparent;
+    border-radius: unset;
+}
+
+
+.mt-12{
+    margin-top: 12px;
+}
+.mb-50{
+    margin-bottom: 50px;
+}
+ .tlogo{
+        height:42px;
+        width:42px;
+        margin-top: 5px;
+    }
+</style>
+<div class="container" ng-controller="customer_controller as std_ctrl">
+	<div class="row ">
+        <div class="col-lg-2">
+          <h3 style="color: #fff;text-transform: uppercase">Danh sách quay số</h3>   
+        </div>
+        <div class="col-lg-8 mt-12" >
+        
+        
+                            <div class="input-group col-md-12">
+                                <input type="text" id="search_input" value="" ng-model="search_input" class="form-control" placeholder="Tìm kiếm theo tên, mã số, hoặc chức vụ..." />
+                                <span class="input-group-btn">
+                                    <button ng-click="std_ctrl.search_data(search_input)" class="button button-green" type="button" style="border: 1px solid #17b417; padding-bottom: 8px;">
+                                        <span class=" glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+                    
+       </div>
+          <div class="col-lg-2 ">
+              <button type="button" class="button button-purple mt-12 pull-right" data-toggle="modal" data-target="#create_student_info_modal"> Thêm người tham dự</button> 
+      
+          </div>
+    </div>
+
+
+
+<p class="{{std_ctrl.alert_class}}">{{std_ctrl.msg}}</p>
+<table class="table">
+            <thead>
+                <tr style="background: #000; color: #fff">
+             
+                    <th style="text-align: center">ID</th>
+                    <th>Họ tên</th>
+                    <th>Mã số</th>
+                    <th>Chức vụ</th>
+               
+                    <th class="text-right">Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+          
+                <tr ng-repeat="students in std_ctrl.student_list">
+                   <td align="center">{{students.id}}</td>
+                    <td>{{students.name}}</td>
+                    <td>{{students.code}}</td>
+                    <td>{{students.job}}</td>
+                    
+                 
+                <td class="text-right">
+         
+                  
+                    <button type="button" data-toggle="modal" data-target="#view_student_info_modal"  class="button button-green" ng-click="std_ctrl.get_student_info(students.id)">Xem</button> 
+                         <button  type="button" data-toggle="modal" data-target="#edit_student_info_modal"  class="button button-blue" ng-click="std_ctrl.edit_student_info(students.id)">Sửa</button> 
+                          <button type="button"  data-toggle="modal"  class="button button-red" ng-click="std_ctrl.delete_student_info(students.id)">Xóa</button> 
+
+                    
+                
+                </td>
+                    
+                    
+                    
+                </tr>
+                
+                
+                
+
+           </tbody>
+        </table>
+    
+
+<div class="pull-right">
+
+    <pagination
+      ng-model="currentPage"
+      total-items="total_row"
+      max-size="maxSize" 
+      items-per-page="itemsPerPage"  
+      boundary-links="true">
+    </pagination>
+</div>
+
+   <div class="modal fade" id="create_student_info_modal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Thêm người tham dự</h4>
+        </div>
+        <div class="modal-body">
+         
+           <form method="post"  id="create_student_info_frm" ng-submit="std_ctrl.addStudent(student)" >
+            <div class="form-group">
+                <label for="name">Họ tên:</label>
+                <input type="text" ng-model="student.name" id="name" class="form-control" required maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="email_address">Mã số:</label>
+                <input type="text" class="form-control" ng-model="student.code" id="code" required maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="contact">Chức vụ:</label>
+                <input type="text" class="form-control" ng-model="student.job" id="job"  maxlength="50">
+            </div>
+            
+             <div class="form-group">
+                <label for="contact">Công việc:</label>
+                <input type="text" class="form-control" ng-model="student.work" id="job"  maxlength="50">
+            </div>
+          
+
+                <div class="form-group mb-50">
+            <input type="submit" class="button button-green  pull-right"  value="Thêm"/>
+                </div>
+                
+        </form> 
+    
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+
+
+  <div class="modal fade" id="edit_student_info_modal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Sửa thông tin || {{std_ctrl.student_info.name}} </h4>
+        </div>
+        <div class="modal-body" >
+         
+            <form method="post"  id="edit_student_info_frm" name="edit_student_info_frm" ng-submit="std_ctrl.updateStudent()">
+                   <input ng-model="std_ctrl.student_info.id" type="hidden" />
+            <div class="form-group">
+                <label >Họ tên:</label>
+                <input type="text"  ng-model="std_ctrl.student_info.name"  class="form-control" required maxlength="50">
+            </div>
+            <div class="form-group">
+                <label >Mã Số:</label>
+                <input type="text" class="form-control" ng-model="std_ctrl.student_info.code" required maxlength="50">
+            </div>
+            <div class="form-group">
+                <label >Chức vụ:</label>
+                <input type="text" class="form-control" ng-model="std_ctrl.student_info.job"  maxlength="150">
+            </div>
+             <div class="form-group">
+                <label >Chức vụ:</label>
+                <input type="text" class="form-control" ng-model="std_ctrl.student_info.work"  maxlength="150">
+            </div>
+          
+                <div class="form-group mb-50">
+            <input type="submit"  class="button button-green  pull-right"  value="Cập nhật"/>
+                </div>
+                
+        </form> 
+    
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+
+
+ <div class="modal fade" id="view_student_info_modal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Thông tin người tham dự quay số </h4>
+        </div>
+        <div class="modal-body" >
+         
+                 
+            <div class="form-group">
+                <label >Họ tên:</label>
+                {{std_ctrl.view_student_info.name}}
+               
+            </div>
+            <div class="form-group">
+                <label >Mã số:</label>
+                  {{std_ctrl.view_student_info.code}}
+              
+            </div>
+            <div class="form-group">
+                <label >Chức vụ:</label>
+                     {{std_ctrl.view_student_info.job}}
+             
+            </div>
+            
+            <div class="form-group">
+                <label >Work:</label>
+                     {{std_ctrl.view_student_info.work}}
+             
+            </div>
+      
+  
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+
+</div>
+ 
+ 

@@ -1,0 +1,81 @@
+<div class="container" ng-controller="HomeController as louis">
+	<div class="row">
+		<div class="col-md-9">			
+				<div id="title-app" class="text-center">
+					<img height="50" src="/public/images/Text.png"/>
+				</div>
+			
+				<div id="random-number" class="text-center">
+				    <ul class="list-inline" ng-hide="louis.status">			
+						<li ng-repeat="n in [] | range:8" class="list-inline-item"><span class="loop-item{{n + 1}}"></span></li>
+
+					</ul>
+					<ul class="list-inline" ng-hide="louis.statusNumber">			
+						<li class="item" ng-repeat="item in louis.charbox track by $index" class="list-inline-item">
+						
+						<span>{{item}}</span>
+						</li>
+					
+					</ul>
+				</div>
+				<div id="name-random" class="text-center animate-show animate-hide" ng-hide="louis.statusName">
+					<div style="padding-top: 10px;">
+			<span style="display: inline-block" id="randomNumber">{{louis.data['name']}}</span>  <span style="display: inline-block;color: #555; font-size: 1.2em;" id="randomJob">{{louis.data['job']}}</span><br/>
+						<span id="work_time">{{louis.data['work']}}</span>			
+					</div>
+					
+				</div>
+				<div id="giai-thuong" class="text-center">
+					<section>
+					<ul id="adward" class="nav nav-pills">
+						<li ng-repeat="n in [] | range:7" ng-class="{active:louis.isSelected(n)}"><a href ng-click="louis.selectTab(n)">{{louis.adward_obj[n]['title']}}</a></li>
+					
+					</ul>
+				
+					<div ng-repeat="n in [] | range:7" class="panel" ng-show="louis.isSelected(n)">		
+		<img height="360" ng-src="/public/images/{{louis.adward_obj[n]['img']}}" />
+					</div>
+					</section>
+					
+				</div>
+				
+				<button style="margin-top: 20px;margin-left: 50px;position: absolute;bottom: 100px;" class="btn btn-info" ng-click="louis.dial()">Quay số</button>
+				 <button ng-hide="louis.selectRandomButon" style="margin-top: 20px;margin-left: 145px;position: absolute;bottom: 100px;" class="btn btn-danger" ng-click="louis.getRandomPerson()">Chọn người ngẫu nhiên</button>
+		</div>
+		<div class="col-md-3">
+			<div id="ket-qua" class="list-group">
+				<img style="width: 150px;margin: 10px auto;display: block;padding-top: 20px;" src="/public/images/Text%202.png"/>
+				<ul id="result-list">
+					<li ng-repeat="obj in louis.people" class="item-result-list">{{$index + 1}}.  {{obj.code}} <br/> {{obj.name}}  <span ng-if="obj.is_work === '0'"><a style="cursor: pointer; color: #fff; float: right" ng-click="louis.deletePerson( obj.user_id )"><i class="fa fa-trash-o"></i></a></span></li>
+				</ul>
+			</div>
+		
+	<div tableToExport></div>	
+					 
+    <div class="row">
+   
+    <ul class="list-inline" style="text-align: center;">
+	    <li>
+			 <button class="btn btn-danger" ng-click="louis.exportToExcel('#tableToExport')">
+      <span class="glyphicon glyphicon-share"></span>
+	  Xuất ra Excel
+    		</button>
+	    </li>
+	    <li>	
+    		 <button class="btn btn-default" ng-click="louis.resetAdward()">
+      <span class="glyphicon glyphicon-refresh"></span>
+	 Reset giải
+    		</button>
+	    </li>	
+    </ul>	
+     	
+    </div><!-- .row -->	
+			
+		</div>
+		
+	</div><!-- .row -->
+</div><!-- .container -->
+
+<script>
+	
+</script>

@@ -1,0 +1,40 @@
+<?php if($this->loginMessage) { ?>
+<p><?php echo $this->loginMessage?></p>
+<?php }
+//echo $this->form;
+?>
+<form enctype="application/x-www-form-urlencoded" method="post" action="/admin/user/login">
+	<input type="hidden" name="id" value="" id="id">
+												<fieldset>
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+		<input type="text" class="form-control" placeholder="Username" name="username" id="username" />
+															<i class="icon-user"></i>
+														</span>
+													</label>
+
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+		<input type="password" class="form-control" placeholder="Password" name="password" id="password" />
+															<i class="icon-lock"></i>
+														</span>
+													</label>
+
+													<div class="space"></div>
+
+													<div class="clearfix">
+														<label class="inline">
+															<input type="checkbox" class="ace" />
+															<span class="lbl"> Remember Me</span>
+														</label>
+
+		<button type="submit" class="width-35 pull-right btn btn-sm btn-primary" name="submit" id="submit">
+		
+															<i class="icon-key"></i>
+															Login
+														</button>
+													</div>
+
+													<div class="space-4"></div>
+												</fieldset>
+											</form>

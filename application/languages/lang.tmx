@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+ <header creationtoolversion="1.0.0" datatype="winres" segtype="sentence"
+         adminlang="en-us" srclang="de-at" o-tmf="abc"
+         creationtool="XYZTool" >
+ </header>
+ <body>
+<tu tuid='chicken'>
+	<tuv xml:lang="en"><seg>The chicken</seg></tuv>
+	<tuv xml:lang="vi"><seg>Con gà</seg></tuv>
+</tu>
+<tu tuid='children'>
+	<tuv xml:lang="en"><seg>The children</seg></tuv>
+	<tuv xml:lang="vi"><seg>Những đứa trẻ</seg></tuv>
+</tu>
+<tu tuid='teacher'>   
+   <tuv xml:lang="en"><seg>The teacher</seg></tuv>
+   <tuv xml:lang="vi"><seg>Giáo viên</seg></tuv>
+ </tu>
+ 
+  <tu tuid='now'>   
+   <tuv xml:lang="en"><seg>Now is %1\$s and I'm using %2\$s langague</seg></tuv>
+   <tuv xml:lang="vi"><seg>Bây giờ là %1\$s và tôi đang sử dụng ngôn ngữ %2\$s </seg></tuv>
+ </tu>

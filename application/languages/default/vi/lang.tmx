@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+ <header creationtoolversion="1.0.0" datatype="winres" segtype="sentence"
+         adminlang="en-us" srclang="de-at" o-tmf="abc"
+         creationtool="XYZTool" >
+ </header>
+ <body>
+<tu tuid='chicken'>
+	<tuv xml:lang="vi"><seg>Con gà</seg></tuv>
+</tu>
+<tu tuid='children'>
+	<tuv xml:lang="vi"><seg>Những đứa trẻ</seg></tuv>
+</tu>
+<tu tuid='teacher'>   
+   <tuv xml:lang="vi"><seg>Giáo viên</seg></tuv>
+ </tu>
+ 
+  <tu tuid='now'>   
+   <tuv xml:lang="vi"><seg>Bây giờ là %1\$s và tôi đang sử dụng ngôn ngữ %2\$s </seg></tuv>
+ </tu>
+  <tu tuid='latest_new'>   
+   <tuv xml:lang="vi"><seg>Tin mới nhất</seg></tuv>
+ </tu>
+ 
+   <tu tuid='intro'>   
+   <tuv xml:lang="vi"><seg>Giới thiệu Công ty</seg></tuv>
+ </tu>
+ 
+  <tu tuid='about'>   
+   <tuv xml:lang="vi"><seg>Giới thiệu về</seg></tuv>
+ </tu>
+ 
+  <tu tuid='more'>   
+   <tuv xml:lang="vi"><seg>Xem thêm</seg></tuv>
+ </tu>
+ 
+  <tu tuid='clients'>   
+   <tuv xml:lang="vi"><seg>ĐỐI TÁC​ -​ KHÁCH HÀNG CỦA CHÚNG TÔI</seg></tuv>
+ </tu>
+ 
+ <tu tuid='members'>   
+   <tuv xml:lang="vi"><seg>CÁC THÀNH VIÊN CỦA HOABINH GROUP</seg></tuv>
+ </tu>
+ 
+   <tu tuid='video'>   
+   <tuv xml:lang="vi"><seg>VIDEO GIỚI THIỆU</seg></tuv>
+ </tu>

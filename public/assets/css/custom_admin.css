@@ -1,0 +1,17 @@
+dt{
+	padding: 10px;
+}
+
+dt label{
+	font-weight: bold !important;
+}
+
+/*
+#uploadifive-file_upload{
+	color: #fff;
+    background-color: #438EB9 !important;
+    border-color: #204d74 !important;
+    border-radius: 10px;
+    cursor: pointer !important;
+    }
+    */

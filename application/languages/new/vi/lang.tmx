@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+ <header creationtoolversion="1.0.0" datatype="winres" segtype="sentence"
+         adminlang="en-us" srclang="de-at" o-tmf="abc"
+         creationtool="XYZTool" >
+ </header>
+ <body>
+<tu tuid='new'>
+	<tuv xml:lang="vi"><seg>Tin tức - Sự kiện</seg></tuv>
+</tu>
+<tu tuid='chicken'>
+	<tuv xml:lang="vi"><seg>Con gà</seg></tuv>
+</tu>
+<tu tuid='children'>
+	<tuv xml:lang="vi"><seg>Những đứa trẻ</seg></tuv>
+</tu>
+<tu tuid='teacher'>   
+   <tuv xml:lang="vi"><seg>Giáo viên</seg></tuv>
+ </tu>
+ 
+  <tu tuid='now'>   
+   <tuv xml:lang="vi"><seg>Bây giờ là %1\$s và tôi đang sử dụng ngôn ngữ %2\$s </seg></tuv>
+ </tu>
+  <tu tuid='our'>   
+   <tuv xml:lang="vi"><seg>Về chúng tôi </seg></tuv>
+ </tu>
+ 
+ <tu tuid='updating'>   
+   <tuv xml:lang="vi"><seg>Nội dung đang cập nhật... </seg></tuv>
+ </tu>
+ 
+  <tu tuid='internal'>   
+   <tuv xml:lang="vi"><seg>Bản tin nội bộ </seg></tuv>
+ </tu>
+ 
+ <tu tuid='newsfrom'>   
+   <tuv xml:lang="vi"><seg>Những bản tin từ </seg></tuv>
+ </tu>
+
+  <tu tuid='recentcomment'>   
+   <tuv xml:lang="vi"><seg>Bình luận mới </seg></tuv>
+ </tu>
+
+ <tu tuid='newscategory'>   
+   <tuv xml:lang="vi"><seg>Chuyên mục tin </seg></tuv>
+ </tu>
+ 
+ <tu tuid='more'>   
+   <tuv xml:lang="vi"><seg>Xem thêm</seg></tuv>
+ </tu>
+ 
+ 
+  <tu tuid='activities'>   
+   <tuv xml:lang="vi"><seg>Lĩnh vực hoạt động</seg></tuv>
+ </tu>

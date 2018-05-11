@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+ <header creationtoolversion="1.0.0" datatype="winres" segtype="sentence"
+         adminlang="en-us" srclang="de-at" o-tmf="abc"
+         creationtool="XYZTool" >
+ </header>
+ <body>
+<tu tuid='chicken'>
+	<tuv xml:lang="en"><seg>The chicken</seg></tuv>
+</tu>
+<tu tuid='children'>
+	<tuv xml:lang="en"><seg>The children</seg></tuv>
+</tu>
+<tu tuid='teacher'>   
+   <tuv xml:lang="en"><seg>The teacher</seg></tuv>
+ </tu>
+ 
+  <tu tuid='now'>   
+   <tuv xml:lang="en"><seg>Now is %1\$s and I'm using %2\$s langague</seg></tuv>
+ </tu>
+
+  <tu tuid='latest_new'>   
+   <tuv xml:lang="en"><seg>Latest New</seg></tuv>
+ </tu>
+ 
+   <tu tuid='intro'>   
+   <tuv xml:lang="en"><seg>Company Brief Introduction</seg></tuv>
+ </tu>
+ 
+ 
+  <tu tuid='about'>   
+   <tuv xml:lang="en"><seg>Intro about</seg></tuv>
+ </tu>
+ 
+   <tu tuid='more'>   
+   <tuv xml:lang="en"><seg>Read More</seg></tuv>
+ </tu>
+ 
+   <tu tuid='clients'>   
+   <tuv xml:lang="en"><seg>Our Clients</seg></tuv>
+ </tu>
+ 
+ <tu tuid='members'>   
+   <tuv xml:lang="en"><seg>MEMBERS OF HOABINH GROUP</seg></tuv>
+ </tu>
+ 
+  <tu tuid='video'>   
+   <tuv xml:lang="en"><seg>INTRO VIDEO</seg></tuv>
+ </tu>

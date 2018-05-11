@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+ <header creationtoolversion="1.0.0" datatype="winres" segtype="sentence"
+         adminlang="en-us" srclang="de-at" o-tmf="abc"
+         creationtool="XYZTool" >
+ </header>
+ <body>
+	 <tu tuid='new'>
+	<tuv xml:lang="en"><seg>News - Event</seg></tuv>
+</tu>
+<tu tuid='chicken'>
+	<tuv xml:lang="en"><seg>The chicken</seg></tuv>
+</tu>
+<tu tuid='children'>
+	<tuv xml:lang="en"><seg>The children</seg></tuv>
+</tu>
+<tu tuid='teacher'>   
+   <tuv xml:lang="en"><seg>The teacher</seg></tuv>
+ </tu>
+ 
+  <tu tuid='now'>   
+   <tuv xml:lang="en"><seg>Now is %1\$s and I'm using %2\$s langague</seg></tuv>
+ </tu>
+ 
+   <tu tuid='our'>   
+   <tuv xml:lang="en"><seg>About Us</seg></tuv>
+ </tu>
+
+ <tu tuid='updating'>   
+   <tuv xml:lang="en"><seg>Content is updating... </seg></tuv>
+ </tu>
+ 
+   <tu tuid='internal'>   
+   <tuv xml:lang="en"><seg>Internal </seg></tuv>
+ </tu>
+
+ <tu tuid='newsfrom'>   
+   <tuv xml:lang="en"><seg>News from </seg></tuv>
+ </tu>
+ 
+  <tu tuid='recentcomment'>   
+   <tuv xml:lang="en"><seg>Recent Comment </seg></tuv>
+ </tu>
+ 
+ <tu tuid='newscategory'>   
+   <tuv xml:lang="en"><seg>News Category </seg></tuv>
+ </tu>
+ 
+  <tu tuid='more'>   
+   <tuv xml:lang="en"><seg>Read more</seg></tuv>
+ </tu>
+
+  <tu tuid='activities'>   
+   <tuv xml:lang="en"><seg>Our Activities</seg></tuv>
+ </tu>
